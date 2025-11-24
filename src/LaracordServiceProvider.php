@@ -91,10 +91,9 @@ abstract class LaracordServiceProvider extends AggregateServiceProvider
             $this->app->make(BasePackageManifest::class)->aliases(),
         ]);
 
-        $this->registerDatabase();
         $this->registerLoop();
         $this->registerConsole();
-        $this->registerLogger();
+
 
         $this->app->singleton(KernelContract::class, Kernel::class);
         $this->app->singleton(Middleware::class, fn () => new Middleware);
@@ -129,16 +128,12 @@ abstract class LaracordServiceProvider extends AggregateServiceProvider
         $this->commands([
             Commands\AdminCommand::class,
             Commands\BootCommand::class,
-            Commands\ConsoleMakeCommand::class,
             Commands\ControllerMakeCommand::class,
             Commands\EventMakeCommand::class,
-            Commands\KeyGenerateCommand::class,
             Commands\MakeCommand::class,
-            Commands\MakeCommandMiddlewareCommand::class,
             Commands\MakeMenuCommand::class,
             Commands\MakeSlashCommand::class,
             Commands\ModelMakeCommand::class,
-            Commands\PromptMakeCommand::class,
             Commands\TaskMakeCommand::class,
             Commands\TokenMakeCommand::class,
             Commands\UpgradeCommand::class,
