@@ -14,7 +14,7 @@ class MakeCommand extends GeneratorCommand
      *
      * @var string
      */
-    protected $name = 'make:command';
+    protected $name = 'bot:make:command';
 
     /**
      * The command description.

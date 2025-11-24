@@ -14,7 +14,7 @@ class MakeMenuCommand extends GeneratorCommand
      *
      * @var string
      */
-    protected $name = 'make:menu';
+    protected $name = 'bot:make:menu';
 
     /**
      * The command description.

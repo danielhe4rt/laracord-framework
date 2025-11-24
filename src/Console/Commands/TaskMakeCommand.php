@@ -13,7 +13,7 @@ class TaskMakeCommand extends GeneratorCommand
      *
      * @var string
      */
-    protected $name = 'make:task';
+    protected $name = 'bot:make:task';
 
     /**
      * The command description.

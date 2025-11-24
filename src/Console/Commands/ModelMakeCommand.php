@@ -90,7 +90,7 @@ class ModelMakeCommand extends FoundationModelMakeCommand
     {
         $table = Str::snake(Str::pluralStudly(class_basename($this->argument('name'))));
 
-        $this->call('make:migration', [
+        $this->call('bot:make:migration', [
             'name' => "create_{$table}_table",
             '--create' => $table,
             '--fullpath' => true,

@@ -15,7 +15,7 @@ class ControllerMakeCommand extends GeneratorCommand
      *
      * @var string
      */
-    protected $name = 'make:controller';
+    protected $name = 'bot:make:controller';
 
     /**
      * The console command description.
@@ -88,7 +88,7 @@ class ControllerMakeCommand extends GeneratorCommand
         $modelClass = $this->parseModel($this->option('model'));
 
         if (! class_exists($modelClass) && confirm("A {$modelClass} model does not exist. Do you want to generate it?", default: true)) {
-            $this->call('make:model', ['name' => $modelClass]);
+            $this->call('bot:make:model', ['name' => $modelClass]);
         }
 
         $replace = $this->buildFormRequestReplacements($replace, $modelClass);

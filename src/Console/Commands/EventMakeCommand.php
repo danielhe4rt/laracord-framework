@@ -19,7 +19,7 @@ class EventMakeCommand extends GeneratorCommand
      *
      * @var string
      */
-    protected $name = 'make:event';
+    protected $name = 'bot:make:event';
 
     /**
      * The command description.

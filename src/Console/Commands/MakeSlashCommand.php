@@ -14,7 +14,7 @@ class MakeSlashCommand extends GeneratorCommand
      *
      * @var string
      */
-    protected $name = 'make:slash-command';
+    protected $name = 'bot:make:slash-command';
 
     /**
      * The command description.
