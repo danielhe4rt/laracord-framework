@@ -2,9 +2,9 @@
 
 namespace Laracord\Console\Commands;
 
-use LaravelZero\Framework\Commands\Command as LaravelCommand;
+use Illuminate\Console\Command as BaseCommand;
 
-abstract class Command extends LaravelCommand
+abstract class Command extends BaseCommand
 {
     //
 }

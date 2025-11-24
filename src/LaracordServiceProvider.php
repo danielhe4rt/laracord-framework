@@ -2,8 +2,6 @@
 
 namespace Laracord;
 
-use Illuminate\Console\Command;
-use Illuminate\Contracts\Console\Kernel as ConsoleKernel;
 use Illuminate\Contracts\Http\Kernel as KernelContract;
 use Illuminate\Filesystem\Filesystem;
 use Illuminate\Foundation\AliasLoader;
@@ -21,8 +19,6 @@ use Laracord\Console\Console;
 use Laracord\Console\Prompts;
 use Laracord\Discord\Message;
 use Laracord\Http\Kernel;
-use LaravelZero\Framework\Components\Database\Provider as DatabaseProvider;
-use LaravelZero\Framework\Components\Log\Provider as LogProvider;
 use React\EventLoop\Loop;
 use React\EventLoop\LoopInterface;
 use React\Stream\CompositeStream;
@@ -230,14 +226,6 @@ abstract class LaracordServiceProvider extends AggregateServiceProvider
     }
 
     /**
-     * Register the logger.
-     */
-    protected function registerLogger(): void
-    {
-        $this->app->booting(fn () => $this->app->register(LogProvider::class));
-    }
-
-    /**
      * Register the default components.
      */
     protected function registerDefaultComponents(Laracord $bot): self
@@ -313,16 +301,6 @@ abstract class LaracordServiceProvider extends AggregateServiceProvider
             if (! is_dir($path)) {
                 mkdir($path, 0755, true);
             }
-        }
-    }
-
-    /**
-     * Register the Database service provider if needed.
-     */
-    protected function registerDatabase(): void
-    {
-        if (! (new DatabaseProvider($this->app))->isAvailable()) {
-            $this->app->booting(fn () => $this->app->register(DatabaseProvider::class));
         }
     }
 
