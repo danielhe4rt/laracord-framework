@@ -39,7 +39,7 @@
     "react/promise": "^3.0",
     "sebastian/environment": "*",
     "symfony/psr-http-message-bridge": "^7.0",
-    "team-reflex/discord-php": "^10.3"
+    "team-reflex/discord-php": "dev-master"
   },
   "require-dev": {
     "laravel/pint": "^1.15"
@@ -52,6 +52,12 @@
       "src/helpers.php"
     ]
   },
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/danielhe4rt/DiscordPHP"
+    }
+  ],
   "config": {
     "sort-packages": true,
     "allow-plugins": {
