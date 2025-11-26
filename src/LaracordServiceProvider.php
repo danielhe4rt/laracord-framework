@@ -87,9 +87,7 @@ abstract class LaracordServiceProvider extends AggregateServiceProvider
             $this->app->register($provider);
         }
 
-        AliasLoader::getInstance([
-            $this->app->make(BasePackageManifest::class)->aliases(),
-        ]);
+        AliasLoader::getInstance($this->app->make(BasePackageManifest::class)->aliases(),);
 
         $this->registerLoop();
         $this->registerConsole();
