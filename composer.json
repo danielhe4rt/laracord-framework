@@ -39,8 +39,7 @@
     "react/promise": "^3.0",
     "sebastian/environment": "*",
     "symfony/psr-http-message-bridge": "^7.0",
-    "team-reflex/discord-php": "dev-voice-dep",
-    "discord-php-helpers/voice": "dev-main"
+    "team-reflex/discord-php": "dev-voice-dep"
   },
   "require-dev": {
     "laravel/pint": "^1.15"
@@ -53,6 +52,8 @@
       "src/helpers.php"
     ]
   },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
   "config": {
     "sort-packages": true,
     "allow-plugins": {
