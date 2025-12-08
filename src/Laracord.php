@@ -263,6 +263,8 @@ class Laracord
             'description' => $this->getDescription(),
             'discordOptions' => $this->getOptions(),
             'defaultHelpCommand' => false,
+            'useTransportCompression' => false,
+            'usePayloadCompression' => true,
         ]);
     }
 
