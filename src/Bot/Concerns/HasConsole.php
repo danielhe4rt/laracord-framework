@@ -6,8 +6,6 @@ use Illuminate\Support\Arr;
 use InvalidArgumentException;
 use Laracord\Console\Console;
 use Laracord\Console\Prompts\Prompt;
-use Laracord\Logging\ConsoleHandler;
-use Psr\Log\LoggerInterface;
 
 trait HasConsole
 {
@@ -40,7 +38,6 @@ trait HasConsole
             return;
         }
 
-        $this->app->make(LoggerInterface::class)->pushHandler(new ConsoleHandler);
 
         $this->console = $this->app->make(Console::class);
 
