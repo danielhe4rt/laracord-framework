@@ -31,7 +31,7 @@
     "illuminate/translation": "^12.0||^13.0",
     "illuminate/validation": "^12.0||^13.0",
     "illuminate/view": "^12.0||^13.0",
-    "intonate/tinker-zero": "dev-main",
+    "intonate/tinker-zero": "dev-master",
     "laravel/sanctum": "^4.0",
     "react/async": "^4.2",
     "react/filesystem": "0.2.x-dev",
