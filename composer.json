@@ -2,7 +2,11 @@
   "name": "laracord/framework",
   "type": "package",
   "description": "The Laracord Framework.",
-  "keywords": ["framework", "laravel", "discord"],
+  "keywords": [
+    "framework",
+    "laravel",
+    "discord"
+  ],
   "license": "MIT",
   "homepage": "https://laracord.com",
   "authors": [
@@ -61,9 +65,9 @@
     }
   },
   "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/danielhe4rt/tinker-zero"
-        }
-    ]
+    {
+      "type": "vcs",
+      "url": "https://github.com/danielhe4rt/tinker-zero"
+    }
+  ]
 }
