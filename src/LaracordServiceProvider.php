@@ -274,7 +274,10 @@ abstract class LaracordServiceProvider extends AggregateServiceProvider
         $configs = $this->getConfigs($this->app->configPath());
 
         foreach ($base as $key => $value) {
-            $this->app['config']->set($key, array_merge($value, $configs[$key] ?? []));
+            $existing = $this->app['config']->get($key, []);
+            $merged = array_merge($value, $configs[$key] ?? []);
+
+            $this->app['config']->set($key, array_merge($merged, $existing));
         }
     }
 
